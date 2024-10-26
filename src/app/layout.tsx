@@ -2,7 +2,9 @@ import type { Metadata } from "next";
 import "./globals.css";
 import { Inter } from "next/font/google";
 import { ThemeProvider } from "@/components/theme-provider";
+import Header from "@/components/Header";
 const interFont = Inter({
+  weight: ["300", "400", "500", "600", "700", "900"],
   subsets: ["latin"],
 });
 export const metadata: Metadata = {
@@ -21,13 +23,14 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" suppressHydrationWarning>
-      <body className={`${interFont.className} antialiased`}>
+      <body className={`${interFont.className} antialiased min-h-screen`}>
         <ThemeProvider
           attribute="class"
           defaultTheme="system"
           enableSystem
           disableTransitionOnChange
         >
+          <Header />
           {children}
         </ThemeProvider>
       </body>
