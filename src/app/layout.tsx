@@ -34,6 +34,10 @@ export default function RootLayout({
         >
           <Header />
           {children}
+          <footer className="w-full h-16 text-center flex justify-center items-center text-sm text-foreground/40">
+            To switch from light to dark, user your system. &copy;Sourav Layek,
+            2024
+          </footer>
         </ThemeProvider>
       </body>
     </html>
