@@ -55,11 +55,11 @@ const ContactMeButton = () => {
       <button className="h-[40px] px-[5px] rounded-md relative bg-brightOrange text-white hidden max-sm:flex justify-center items-center ">
         🤝
       </button>
-      <button className="sm:flex h-[40px] px-[10px] ml-[40px] rounded-md relative bg-brightOrange text-white hidden justify-center items-center group/modal-btn overflow-hidden">
-        <span className="group-hover/modal-btn:translate-x-40 text-center transition duration-500">
+      <button className="sm:flex h-[40px] px-[10px] ml-[40px] rounded-md relative bg-brightOrange text-white hidden justify-center items-center group/contact-btn overflow-hidden">
+        <span className="group-hover/contact-btn:translate-x-40 text-center transition duration-500">
           Contact Me
         </span>
-        <div className="-translate-x-40 group-hover/modal-btn:translate-x-0 flex items-center justify-center absolute inset-0 transition duration-500 text-white z-20">
+        <div className="-translate-x-40 group-hover/contact-btn:translate-x-0 flex items-center justify-center absolute inset-0 transition duration-500 text-white z-20">
           🤝
         </div>
       </button>

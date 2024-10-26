@@ -24,7 +24,7 @@ export default function RootLayout({
   return (
     <html lang="en" suppressHydrationWarning>
       <body
-        className={`${interFont.className} antialiased min-h-screen max-w-screen overflow-y-hidden`}
+        className={`${interFont.className} antialiased min-h-screen max-w-screen overflow-x-hidden`}
       >
         <ThemeProvider
           attribute="class"
