@@ -24,6 +24,7 @@ import {
 } from "./data";
 import { LinkPreview } from "@/components/ui/link-preview";
 import ServiceDetailsModal from "@/components/service-details-modal";
+import Link from "next/link";
 
 const words: string[] = [
   "Innovative",
@@ -52,12 +53,15 @@ const HomePage = () => {
         </BackgroundBeamsWithCollision>
       </section>
       <section className="mt-16 container">
-        <div className="mb-6 flex justify-between max-sm:flex-col items-center">
+        <div className="mb-6 flex justify-between max-sm:flex-col items-center max-sm:gap-2">
           <h1 className="text-2xl">Highlights of My Journey</h1>
           <div className="flex-1 h-[1px] bg-gradient-to-r from-transparent to-transparent via-foreground max-sm:hidden"></div>
-          <button className="bg-brightOrange text-white px-4 py-2 rounded-md transition duration-150 hover:bg-brightOrange/80">
+          <Link
+            href="/works"
+            className="bg-brightOrange text-white px-4 py-2 rounded-md transition duration-150 hover:bg-brightOrange/80"
+          >
             See More
-          </button>
+          </Link>
         </div>
         <BentoGrid>
           <BentoGridItem className="col-span-6 p-0 overflow-hidden">

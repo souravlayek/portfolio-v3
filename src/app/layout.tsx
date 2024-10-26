@@ -3,6 +3,7 @@ import "./globals.css";
 import { Inter } from "next/font/google";
 import { ThemeProvider } from "@/components/theme-provider";
 import Header from "@/components/Header";
+import { IconBulbFilled } from "@tabler/icons-react";
 const interFont = Inter({
   weight: ["300", "400", "500", "600", "700", "900"],
   subsets: ["latin"],
@@ -35,8 +36,8 @@ export default function RootLayout({
           <Header />
           {children}
           <footer className="w-full h-16 text-center flex justify-center items-center text-sm text-foreground/40">
-            To switch from light to dark, user your system. &copy;Sourav Layek,
-            2024
+            <IconBulbFilled className="w-4 h-4 mr-2" /> Dark and light modes
+            adapt to your device settings. &copy;Sourav Layek, 2024
           </footer>
         </ThemeProvider>
       </body>

@@ -7,12 +7,12 @@ const Logo = ({ className }: { className?: string }) => {
     <Link href="/">
       <div
         className={cn(
-          "text-[32px] text-foreground font-bold cursor-pointer transition duration-300 hover:opacity-90",
+          "text-[18px] text-foreground font-bold cursor-pointer transition duration-300 hover:opacity-90",
           className,
         )}
       >
         Sourav
-        <span className="text-[24px] max-lg:text-[18px] text-muted-foreground ml-[5px] font-medium max-[769px]:hidden">
+        <span className="text-[14px] max-lg:text-[18px] text-muted-foreground ml-[5px] font-medium max-[769px]:hidden">
           Software Engineer
         </span>
       </div>
