@@ -14,15 +14,8 @@ import {
 } from "@tabler/icons-react";
 import React from "react";
 import { Carousel, Card } from "@/components/ui/apple-cards-carousel";
-import Image from "next/image";
 import { InfiniteMovingCards } from "@/components/ui/infinite-moving-cards";
-import {
-  LINKS_FOR_TECHNOLOGIES,
-  SERVICES,
-  TESTIMONIALS,
-  WORKFLOW_STEPS,
-} from "./data";
-import { LinkPreview } from "@/components/ui/link-preview";
+import { SERVICES, TESTIMONIALS, WORKFLOW_STEPS } from "./data";
 import ServiceDetailsModal from "@/components/service-details-modal";
 import Link from "next/link";
 

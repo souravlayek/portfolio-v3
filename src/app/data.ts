@@ -219,3 +219,50 @@ export const LINKS_FOR_TECHNOLOGIES: Record<string, string> = {
   Notion: "https://www.notion.so/",
   GitHub: "https://github.com/",
 };
+export const EXPERIENCES: {
+  title: string;
+  subTitle: string;
+  content: string[];
+}[] = [
+  {
+    title: "Senior Software Engineer",
+    subTitle: "NextZen Minds (Oct 2024 - Present)",
+    content: [
+      "Currently serving as a Senior Software Engineer, contributing to architectural decisions to ensure application scalability and performance.",
+      "Improved team and project efficiency by introducing micro-frontend architecture, fostering a modular and maintainable codebase.",
+    ],
+  },
+  {
+    title: "Front-end Developer",
+    subTitle: "CBNITS (Jan 2022 - Oct 2024)",
+    content: [
+      "Led development for a critical project module, making significant contributions as a key contributor.",
+      "Enhanced security measures to comply with stringent Singaporean regulations, supporting project integrity.",
+      "Participated in architectural decision-making for applications, improving team and project performance through the introduction of micro-frontend architecture.",
+    ],
+  },
+  {
+    title: "Front-end Developer",
+    subTitle: "Thirdly.UK (Mar 2021 - Jan 2022)",
+    content: [
+      "Revamped the front-end of a key CRM system, achieving a 40% performance boost.",
+      "Developed a versatile component library widely used across multiple projects.",
+    ],
+  },
+  {
+    title: "Front-end Developer",
+    subTitle: "Lapolo (Oct 2020 - Mar 2021)",
+    content: [
+      "Introduced React JS to the team, leading collaborative efforts to adopt and implement the technology across multiple projects.",
+      "Spearheaded the development of various initiatives, enhancing the company’s technological capabilities and delivering impactful solutions.",
+    ],
+  },
+  {
+    title: "Front-end Developer",
+    subTitle: "Freelancer (Mar 2020 - Oct 2020)",
+    content: [
+      "Collaborated with various clients to build multiple React JS websites.",
+      "Developed user interfaces, implemented functionalities, and ensured optimal performance and responsiveness across projects.",
+    ],
+  },
+];

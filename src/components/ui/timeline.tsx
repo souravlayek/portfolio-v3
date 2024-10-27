@@ -9,6 +9,7 @@ import React, { useEffect, useRef, useState } from "react";
 
 interface TimelineEntry {
   title: string;
+  subTitle?: string;
   content: React.ReactNode;
 }
 
@@ -46,6 +47,7 @@ export const Timeline = ({ data }: { data: TimelineEntry[] }) => {
               </div>
               <h3 className="hidden md:block text-xl md:pl-20 md:text-3xl font-bold text-neutral-500 dark:text-neutral-500 ">
                 {item.title}
+                <p className="text-sm">{item?.subTitle ?? ""}</p>
               </h3>
             </div>
 

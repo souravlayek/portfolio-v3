@@ -2,7 +2,7 @@
 import * as HoverCardPrimitive from "@radix-ui/react-hover-card";
 import Image from "next/image";
 import { encode } from "qss";
-import React from "react";
+import React, { HTMLAttributeAnchorTarget } from "react";
 import {
   AnimatePresence,
   motion,
@@ -20,6 +20,7 @@ type LinkPreviewProps = {
   height?: number;
   quality?: number;
   layout?: string;
+  target?: HTMLAttributeAnchorTarget;
 } & (
   | { isStatic: true; imageSrc: string }
   | { isStatic?: false; imageSrc?: never }
@@ -35,6 +36,7 @@ export const LinkPreview = ({
   layout = "fixed",
   isStatic = false,
   imageSrc = "",
+  target,
 }: LinkPreviewProps) => {
   let src;
   if (!isStatic) {
@@ -101,6 +103,7 @@ export const LinkPreview = ({
           onMouseMove={handleMouseMove}
           className={cn("text-black dark:text-white", className)}
           href={url}
+          target={target}
         >
           {children}
         </HoverCardPrimitive.Trigger>
@@ -135,6 +138,7 @@ export const LinkPreview = ({
                   href={url}
                   className="block p-1 bg-white border-2 border-transparent shadow rounded-xl hover:border-neutral-200 dark:hover:border-neutral-800"
                   style={{ fontSize: 0 }}
+                  target={target}
                 >
                   <Image
                     src={isStatic ? imageSrc : src}
