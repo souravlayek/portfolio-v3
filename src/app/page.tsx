@@ -5,11 +5,17 @@ import { Separator } from "@/components/ui/separator";
 import { Timeline } from "@/components/ui/timeline";
 import {
   IconArrowRight,
+  IconBrandAws,
+  IconBrandDjango,
   IconBrandDocker,
+  IconBrandFlutter,
   IconBrandGithub,
   IconBrandGolang,
   IconBrandJavascript,
   IconBrandNextjs,
+  IconBrandReact,
+  IconBrandRedux,
+  IconBrandTypescript,
   IconWorld,
 } from "@tabler/icons-react";
 import React from "react";
@@ -58,20 +64,42 @@ const HomePage = () => {
         </div>
         <BentoGrid>
           <BentoGridItem className="col-span-6 p-0 overflow-hidden">
-            <WorkShowcaseCard />
+            <WorkShowcaseCard
+              image="/projects/pahari.png"
+              name="Pahari Home Solution Companion"
+              technologies={[IconBrandFlutter]}
+            />
           </BentoGridItem>
           <BentoGridItem className="col-span-6 p-0 overflow-hidden">
-            <WorkShowcaseCard />
+            <WorkShowcaseCard
+              image="/projects/maity_gini.png"
+              name="Maity Gini Palace - Jwellery E-Commerce"
+              link="https://jwel.codevizon.com"
+              technologies={[
+                IconBrandGolang,
+                IconBrandNextjs,
+                IconBrandTypescript,
+                IconBrandDocker,
+                IconBrandAws,
+              ]}
+            />
           </BentoGridItem>
-          <BentoGridItem className="col-span-12 p-0 overflow-hidden">
-            <WorkShowcaseCard />
-          </BentoGridItem>
+          {/* <BentoGridItem className="col-span-12 p-0 overflow-hidden">
+            <WorkShowcaseCard
+              image="/projects/yp.png"
+              name="Your Parcel"
+              technologies={[IconBrandReact, IconBrandDjango, IconBrandRedux]}
+            />
+          </BentoGridItem> */}
+          {/*
+
+
           <BentoGridItem className="col-span-8 p-0 overflow-hidden">
             <WorkShowcaseCard />
           </BentoGridItem>
           <BentoGridItem className="col-span-4 p-0 overflow-hidden">
             <WorkShowcaseCard />
-          </BentoGridItem>
+          </BentoGridItem> */}
         </BentoGrid>
       </section>
       <section className="mt-16 container">
@@ -140,26 +168,45 @@ const HomePage = () => {
   );
 };
 
-const WorkShowcaseCard = () => {
+const WorkShowcaseCard = ({
+  image,
+  name,
+  github,
+  link,
+  technologies = [],
+}: {
+  image: string;
+  name: string;
+  github?: string;
+  link?: string;
+  technologies: React.FC[];
+}) => {
   return (
     <div className="bg-white dark:bg-black  h-full flex flex-col">
       <div
         style={{
-          backgroundImage: "url('https://placehold.co/600x400')",
+          backgroundImage: `url('${image}')`,
         }}
         className="w-full h-full rounded-xl bg-center bg-cover bg-no-repeat flex items-end group/work-card"
       >
         <div className="h-8 px-2 w-full flex gap-2 items-center pb-2 opacity-0 transition duration-150 group-hover/work-card:opacity-100">
-          <IconBrandGithub className="w-6 h-6 text-primary cursor-pointer hover:animate-bounce" />
-          <IconWorld className="w-6 h-6 text-primary cursor-pointer hover:animate-bounce" />
-          <Separator orientation="vertical" />
-          <IconBrandNextjs className="w-5 h-5 text-primary/50" />
-          <IconBrandJavascript className="w-5 h-5 text-primary/50" />
-          <IconBrandDocker className="w-5 h-5 text-primary/50" />
-          <IconBrandGolang className="w-5 h-5 text-primary/50" />
+          {github && (
+            <Link href={github} target="_blank">
+              <IconBrandGithub className="w-6 h-6 text-primary cursor-pointer hover:animate-bounce" />
+            </Link>
+          )}
+          {link && (
+            <Link href={link} target="_blank">
+              <IconWorld className="w-6 h-6 text-primary cursor-pointer hover:animate-bounce" />
+            </Link>
+          )}
+          {(github || link) && <Separator orientation="vertical" />}
+          {technologies.map((Icon, index) => (
+            <Icon key={index} className="w-5 h-5 text-primary/50" />
+          ))}
         </div>
       </div>
-      <p className="text-sm tracking-widest font-light h-fit">Mittler</p>
+      <p className="text-sm tracking-widest font-light h-fit">{name}</p>
     </div>
   );
 };
