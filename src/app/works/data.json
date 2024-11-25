@@ -1,0 +1,201 @@
+[
+  {
+    "id": "project_01",
+    "thumbnail": "/projects/mittler.png",
+    "title": "Mittler",
+    "description": "A connector between YouTube creators and video editing agencies, simplifying workflows and bridging the gap between content creation and editing.",
+    "challenges": [
+      {
+        "challenge": "Handling large video file uploads efficiently.",
+        "solution": "Implemented resumable upload with chunked video processing."
+      },
+      {
+        "challenge": "Caching frequently accessed video metadata.",
+        "solution": "Integrated Redis for optimized caching and faster API responses."
+      }
+    ],
+    "techStack": [
+      { "name": "Golang", "link": "https://golang.org/" },
+      { "name": "Redis", "link": "https://redis.io/" },
+      {
+        "name": "YouTube API",
+        "link": "https://developers.google.com/youtube/"
+      }
+    ],
+    "previewLink": "https://mittler.example.com",
+    "repositoryLink": "https://github.com/yourusername/mittler"
+  },
+  {
+    "id": "project_02",
+    "hide": true,
+    "thumbnail": "yaga_thumbnail.jpg",
+    "title": "YAGA (Yet Another Gmail Application)",
+    "description": "A robust application for managing and tokenizing Gmail data, tailored for productivity enthusiasts.",
+    "challenges": [
+      {
+        "challenge": "Batch processing of large email datasets.",
+        "solution": "Implemented batch HTTP requests to optimize data retrieval."
+      },
+      {
+        "challenge": "Parsing multipart/mixed content in emails.",
+        "solution": "Developed custom parsers to handle complex email structures."
+      }
+    ],
+    "techStack": [
+      { "name": "Golang", "link": "https://golang.org/" },
+      { "name": "Gmail API", "link": "https://developers.google.com/gmail/api" }
+    ],
+    "previewLink": "https://yaga.example.com",
+    "repositoryLink": "https://github.com/yourusername/yaga"
+  },
+  {
+    "id": "project_03",
+    "thumbnail": "/projects/pahari.png",
+    "title": "Pahari Home Solution Connect",
+    "description": "A mobile app for a business dealing in TMT bars, cement, and tiles, enhancing user engagement and operational efficiency.",
+    "challenges": [
+      {
+        "challenge": "Tracking user activities with analytics.",
+        "solution": "Built a custom analytics tool for detailed user behavior tracking."
+      },
+      {
+        "challenge": "Providing a seamless cross-platform experience.",
+        "solution": "Developed the app in Flutter for native performance on iOS and Android."
+      }
+    ],
+    "techStack": [
+      { "name": "Flutter", "link": "https://flutter.dev/" },
+      { "name": "Firebase", "link": "https://firebase.google.com/" }
+    ],
+    "previewLink": "https://paharihome.example.com",
+    "repositoryLink": "https://github.com/yourusername/pahari-home"
+  },
+  {
+    "id": "project_04",
+    "thumbnail": "/projects/ezrx.png",
+    "title": "eZRx",
+    "description": "An interactive healthcare app designed to streamline prescription management for healthcare professionals.",
+    "challenges": [
+      {
+        "challenge": "Ensuring real-time synchronization of prescription data.",
+        "solution": "Integrated WebSocket technology for real-time updates."
+      },
+      {
+        "challenge": "Making the interface user-friendly for non-technical users.",
+        "solution": "Designed a clean, minimalistic UI with React JS."
+      }
+    ],
+    "techStack": [
+      { "name": "React JS", "link": "https://reactjs.org/" },
+      { "name": "Node.js", "link": "https://nodejs.org/" }
+    ],
+    "previewLink": "https://ezrx.example.com",
+    "repositoryLink": "https://github.com/yourusername/ezrx"
+  },
+  {
+    "id": "project_05",
+    "thumbnail": "/projects/ezpharmacy.gif",
+    "title": "eZPharmacy",
+    "description": "A pharmacy management system for inventory tracking and streamlined workflows.",
+    "challenges": [
+      {
+        "challenge": "Managing large inventories with high performance.",
+        "solution": "Optimized database queries and implemented caching mechanisms."
+      },
+      {
+        "challenge": "Integrating barcode scanning for stock management.",
+        "solution": "Utilized third-party libraries for seamless barcode integration."
+      }
+    ],
+    "techStack": [
+      { "name": "React JS", "link": "https://reactjs.org/" },
+      { "name": "MongoDB", "link": "https://www.mongodb.com/" }
+    ],
+    "previewLink": "https://ezpharmacy.example.com",
+    "repositoryLink": "https://github.com/yourusername/ezpharmacy"
+  },
+  {
+    "id": "project_06",
+    "hide": true,
+    "thumbnail": "thirdlyui_thumbnail.jpg",
+    "title": "ThirdlyUI Component Library",
+    "description": "A versatile component library that enhanced the scalability and performance of a CRM system.",
+    "challenges": [
+      {
+        "challenge": "Building reusable components for diverse use cases.",
+        "solution": "Developed modular components with TypeScript for type safety."
+      },
+      {
+        "challenge": "Improving performance in complex UI interactions.",
+        "solution": "Optimized rendering logic and state management."
+      }
+    ],
+    "techStack": [
+      { "name": "React JS", "link": "https://reactjs.org/" },
+      { "name": "TypeScript", "link": "https://www.typescriptlang.org/" }
+    ],
+    "previewLink": "https://thirdlyui.example.com",
+    "repositoryLink": "https://github.com/yourusername/thirdlyui"
+  },
+  {
+    "id": "project_07",
+    "thumbnail": "/projects/maity_gini.png",
+    "title": "Mity Gini Palace",
+    "description": "A bespoke application for managing and showcasing a jewelry business's offerings.",
+    "challenges": [
+      {
+        "challenge": "Creating a visually appealing interface to showcase jewelry.",
+        "solution": "Incorporated modern design trends and animations for product galleries."
+      },
+      {
+        "challenge": "Implementing a secure payment gateway.",
+        "solution": "Integrated a reliable and secure third-party payment API."
+      }
+    ],
+    "techStack": [
+      { "name": "React JS", "link": "https://reactjs.org/" },
+      { "name": "Node.js", "link": "https://nodejs.org/" },
+      { "name": "Stripe", "link": "https://stripe.com/" }
+    ],
+    "previewLink": "https://mityginipalace.example.com",
+    "repositoryLink": "https://github.com/yourusername/mityginipalace"
+  },
+  {
+    "id": "project_08",
+    "thumbnail": "/projects/nzhms.jpeg",
+    "title": "NZHMS (Healthcare and Laboratory Information Management System)",
+    "description": "A comprehensive HIMS and LIMS platform supporting both Outpatient Department (OPD) and Inpatient Department (IPD) workflows. This project aimed to streamline hospital and laboratory operations, improving efficiency and patient care.",
+    "challenges": [
+      {
+        "challenge": "Architectural decision to optimize development and scaling.",
+        "solution": "Implemented a Micro-frontend architecture using Module Federation to enable independent development and deployment of modules, reducing interdependencies."
+      },
+      {
+        "challenge": "Managing consistent state and communication across multiple micro-frontends.",
+        "solution": "Introduced a shared state management library and a message bus for seamless inter-module communication."
+      },
+      {
+        "challenge": "Ensuring fast load times for complex modules in a single-page application.",
+        "solution": "Adopted lazy loading and code splitting techniques to minimize initial load times."
+      },
+      {
+        "challenge": "Supporting real-time updates across OPD and IPD workflows.",
+        "solution": "Integrated WebSockets for real-time communication and updates for patient records and laboratory tests."
+      },
+      {
+        "challenge": "Building reusable and scalable UI components across multiple teams.",
+        "solution": "Developed a shared component library with TypeScript to ensure consistency and reusability."
+      }
+    ],
+    "techStack": [
+      { "name": "React JS", "link": "https://reactjs.org/" },
+      { "name": "TypeScript", "link": "https://www.typescriptlang.org/" },
+      {
+        "name": "Micro-frontends (Module Federation)",
+        "link": "https://webpack.js.org/concepts/module-federation/"
+      }
+    ],
+    "previewLink": "https://nzhms.example.com",
+    "repositoryLink": "https://github.com/yourusername/nzhms"
+  }
+]

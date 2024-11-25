@@ -39,7 +39,7 @@ const HomePage = () => {
     <main>
       <section className="h-[60vh] flex items-center">
         <BackgroundBeamsWithCollision>
-          <div className="container">
+          <div className="container max-md:text-center">
             <p className="text-lg font-medium text-neutral-600 dark:text-neutral-400">
               Hey there,
             </p>
@@ -182,7 +182,7 @@ const WorkShowcaseCard = ({
   technologies: React.FC[];
 }) => {
   return (
-    <div className="bg-white dark:bg-black  h-full flex flex-col">
+    <div className="bg-white dark:bg-black min-h-[240px] h-full flex flex-col">
       <div
         style={{
           backgroundImage: `url('${image}')`,

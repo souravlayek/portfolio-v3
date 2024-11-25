@@ -18,6 +18,7 @@ const cards = [
   {
     title: "Valley of life",
     src: "https://images.unsplash.com/photo-1600271772470-bd22a42787b3?q=80&w=3072&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    isHorizontal: true,
   },
   {
     title: "Sala behta hi jayega",
@@ -40,7 +41,7 @@ const cards = [
 const SOCIALS = [
   {
     label: "LinkedIn",
-    link: "https://linkedin.com/souravlayek",
+    link: "https://www.linkedin.com/in/souravlayek/",
   },
   {
     label: "Read.cv",
@@ -68,8 +69,8 @@ const AboutMe = () => {
     <main className="container">
       <section className="py-28">
         <h1 className="text-2xl mb-6">About Me</h1>
-        <div className="flex justify-between gap-24">
-          <div className="relative min-w-32 h-32 rounded-full overflow-hidden">
+        <div className="flex justify-between gap-24 flex-col lg:flex-row">
+          <div className="relative min-w-32 max-w-32 h-32 rounded-full overflow-hidden">
             <Image
               src="/me.jpg"
               alt="Sourav's headshot"

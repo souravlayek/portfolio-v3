@@ -13,7 +13,7 @@ const Logo = ({ className }: { className?: string }) => {
       >
         Sourav
         <span className="text-[14px] max-lg:text-[18px] text-muted-foreground ml-[5px] font-medium max-[769px]:hidden">
-          Software Engineer
+          Software Engineer & Architect
         </span>
       </div>
     </Link>
