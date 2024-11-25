@@ -15,7 +15,7 @@ const ModalContent = ({ data }: { data: any }) => {
       </div>
       <div>
         <h2 className="text-lg font-bold my-4">Challenges I Faced</h2>
-        {data.challenges.map((item) => (
+        {data.challenges.map((item: any) => (
           <div className="my-1" key={item.challenge}>
             <p className="font-semibold flex gap-1 items-center">
               <IconArrowRight />
@@ -30,7 +30,7 @@ const ModalContent = ({ data }: { data: any }) => {
         <h2 className="text-lg font-bold my-4">
           Tech Stack I have Worked With
         </h2>
-        {data.techStack.map((item) => (
+        {data.techStack.map((item: any) => (
           <div className="my-1 ml-2" key={item.link}>
             <LinkPreview
               url={item.link}

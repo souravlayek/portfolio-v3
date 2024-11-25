@@ -11,31 +11,46 @@ export const metadata = {
 };
 
 const cards = [
+  { title: "Art In Tail", src: "/gallery/artInTail.jpg" },
+  { title: "Leopard", src: "/gallery/leopard.jpg" },
+  { title: "Buildings", src: "/gallery/buildings.jpg" },
+  { title: "Leopard Eye", src: "/gallery/leopardEye.jpg" },
+  { title: "Butcher", src: "/gallery/butcher.jpg" },
+  { title: "Locopilot", src: "/gallery/locopilot.jpg" },
+  { title: "Carriage", src: "/gallery/carraige.jpg" },
   {
-    title: "Forest Adventure",
-    src: "https://images.unsplash.com/photo-1518710843675-2540dd79065c?q=80&w=3387&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    title: "Merge Illusion",
+    src: "/gallery/mergeIllusion.jpg",
+    isHorizontal: true,
   },
+  { title: "Child With Camel", src: "/gallery/childWithCammel.jpg" },
+  { title: "Monk", src: "/gallery/monk.jpg" },
+
+  { title: "Monkey", src: "/gallery/monkey.jpg" },
+  { title: "Covered Eye", src: "/gallery/coveredEye.jpg", isHorizontal: true },
+  { title: "Difference", src: "/gallery/difference.jpg" },
+  { title: "Panchayat", src: "/gallery/panchayat.jpg" },
+  { title: "Dog", src: "/gallery/dog.jpg" },
+  { title: "Play With Fire", src: "/gallery/playWithFire.jpg" },
+  { title: "Durga", src: "/gallery/durga.jpg" },
+  { title: "Playful", src: "/gallery/playfull.jpg" },
+  { title: "Eyes", src: "/gallery/eyes.jpg" },
   {
-    title: "Valley of life",
-    src: "https://images.unsplash.com/photo-1600271772470-bd22a42787b3?q=80&w=3072&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    title: "Rajasthani Dance",
+    src: "/gallery/rajasthaniDance.jpg",
     isHorizontal: true,
   },
   {
-    title: "Sala behta hi jayega",
-    src: "https://images.unsplash.com/photo-1505142468610-359e7d316be0?q=80&w=3070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    title: "Hard Work Before Durga Puja",
+    src: "/gallery/hardWorkBeforeDurgaPuja.jpg",
   },
-  {
-    title: "Camping is for pros",
-    src: "https://images.unsplash.com/photo-1486915309851-b0cc1f8a0084?q=80&w=3387&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-  },
-  {
-    title: "The road not taken",
-    src: "https://images.unsplash.com/photo-1507041957456-9c397ce39c97?q=80&w=3456&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-  },
-  {
-    title: "The First Rule",
-    src: "https://assets.aceternity.com/the-first-rule.png",
-  },
+  { title: "Recursion", src: "/gallery/recursion.jpg", isHorizontal: true },
+  { title: "Horse", src: "/gallery/horse.jpg" },
+  { title: "The Horse Dancer", src: "/gallery/horseDancer.jpg" },
+  { title: "The Tri", src: "/gallery/theTri.jpg", isHorizontal: true },
+  { title: "Train Man", src: "/gallery/trainMan.jpg" },
+  { title: "Japan In India", src: "/gallery/japanInIndia.jpg" },
+  { title: "Twistness", src: "/gallery/twistness.jpg" },
 ];
 
 const SOCIALS = [
@@ -192,7 +207,7 @@ const AboutMe = () => {
           as I share glimpses of my journey, from snapshots of stunning
           landscapes to the experiences that fuel my work and passions.
         </p>
-        <div className="my-16">
+        <div className="my-16" id="gallery">
           <FocusCards cards={cards} />
         </div>
       </section>

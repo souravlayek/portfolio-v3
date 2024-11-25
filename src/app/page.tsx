@@ -6,15 +6,11 @@ import { Timeline } from "@/components/ui/timeline";
 import {
   IconArrowRight,
   IconBrandAws,
-  IconBrandDjango,
   IconBrandDocker,
   IconBrandFlutter,
   IconBrandGithub,
   IconBrandGolang,
-  IconBrandJavascript,
   IconBrandNextjs,
-  IconBrandReact,
-  IconBrandRedux,
   IconBrandTypescript,
   IconWorld,
 } from "@tabler/icons-react";
@@ -179,7 +175,7 @@ const WorkShowcaseCard = ({
   name: string;
   github?: string;
   link?: string;
-  technologies: React.FC[];
+  technologies: React.FC<{ className?: string }>[];
 }) => {
   return (
     <div className="bg-white dark:bg-black min-h-[240px] h-full flex flex-col">
