@@ -12,9 +12,9 @@ export const metadata = {
 
 const cards = [
   { title: "Art In Tail", src: "/gallery/artInTail.jpg" },
-  { title: "Leopard", src: "/gallery/leopard.jpg" },
+  { title: "Leopard", src: "/gallery/leopard.jpg", isHorizontal: true },
   { title: "Buildings", src: "/gallery/buildings.jpg" },
-  { title: "Leopard Eye", src: "/gallery/leopardEye.jpg" },
+  { title: "Leopard Eye", src: "/gallery/leopardEye.jpg", isHorizontal: true },
   { title: "Butcher", src: "/gallery/butcher.jpg" },
   { title: "Locopilot", src: "/gallery/locopilot.jpg" },
   { title: "Carriage", src: "/gallery/carraige.jpg" },
@@ -24,26 +24,38 @@ const cards = [
     isHorizontal: true,
   },
   { title: "Child With Camel", src: "/gallery/childWithCammel.jpg" },
+
   { title: "Monk", src: "/gallery/monk.jpg" },
+  { title: "Covered Eye", src: "/gallery/coveredEye.jpg", isHorizontal: true },
+
+  { title: "Panchayat", src: "/gallery/panchayat.jpg", isHorizontal: true },
 
   { title: "Monkey", src: "/gallery/monkey.jpg" },
-  { title: "Covered Eye", src: "/gallery/coveredEye.jpg", isHorizontal: true },
   { title: "Difference", src: "/gallery/difference.jpg" },
-  { title: "Panchayat", src: "/gallery/panchayat.jpg" },
+  {
+    title: "Play With Fire",
+    src: "/gallery/playWithFire.jpg",
+    isHorizontal: true,
+  },
+
   { title: "Dog", src: "/gallery/dog.jpg" },
-  { title: "Play With Fire", src: "/gallery/playWithFire.jpg" },
-  { title: "Durga", src: "/gallery/durga.jpg" },
+
+  { title: "Eyes", src: "/gallery/eyes.jpg", isHorizontal: true },
   { title: "Playful", src: "/gallery/playfull.jpg" },
-  { title: "Eyes", src: "/gallery/eyes.jpg" },
   {
     title: "Rajasthani Dance",
     src: "/gallery/rajasthaniDance.jpg",
     isHorizontal: true,
   },
+
   {
     title: "Hard Work Before Durga Puja",
     src: "/gallery/hardWorkBeforeDurgaPuja.jpg",
+    isHorizontal: true,
   },
+
+  { title: "Durga", src: "/gallery/durga.jpg" },
+
   { title: "Recursion", src: "/gallery/recursion.jpg", isHorizontal: true },
   { title: "Horse", src: "/gallery/horse.jpg" },
   { title: "The Horse Dancer", src: "/gallery/horseDancer.jpg" },

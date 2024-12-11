@@ -85,17 +85,17 @@
     @apply border-border;
   }
   /* width */
-  ::-webkit-scrollbar {
+  body::-webkit-scrollbar {
     width: 4px;
   }
 
   /* Track */
-  ::-webkit-scrollbar-track {
+  body::-webkit-scrollbar-track {
     background: hsl(var(--background));
   }
 
   /* Handle */
-  ::-webkit-scrollbar-thumb {
+  body::-webkit-scrollbar-thumb {
     background: var(--bright-orange);
   }
 
