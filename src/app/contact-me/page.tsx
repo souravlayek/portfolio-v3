@@ -66,7 +66,7 @@ export default function ContactUs() {
     } catch (error) {
       toast({
         title: "Scheduled: Catch up",
-        description: error?.message ?? "Something went wrong",
+        description: "Something went wrong",
         variant: "destructive",
       });
       console.log(error);
