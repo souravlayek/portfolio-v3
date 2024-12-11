@@ -80,22 +80,6 @@ const HomePage = () => {
               ]}
             />
           </BentoGridItem>
-          {/* <BentoGridItem className="col-span-12 p-0 overflow-hidden">
-            <WorkShowcaseCard
-              image="/projects/yp.png"
-              name="Your Parcel"
-              technologies={[IconBrandReact, IconBrandDjango, IconBrandRedux]}
-            />
-          </BentoGridItem> */}
-          {/*
-
-
-          <BentoGridItem className="col-span-8 p-0 overflow-hidden">
-            <WorkShowcaseCard />
-          </BentoGridItem>
-          <BentoGridItem className="col-span-4 p-0 overflow-hidden">
-            <WorkShowcaseCard />
-          </BentoGridItem> */}
         </BentoGrid>
       </section>
       <section className="mt-16 container">

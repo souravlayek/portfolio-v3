@@ -1,15 +1,78 @@
 "use client";
-import React from "react";
+import React, { useState } from "react";
 import { Label } from "@/components/ui/label";
 import { Input } from "@/components/ui/input";
 import { cn } from "@/lib/utils";
 
 import { TextArea } from "@/components/ui/textarea";
+import { useToast } from "@/hooks/use-toast";
+function validateEmail(email: string): boolean {
+  // Regular expression to validate an email
+  const emailRegex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+
+  // Test the email against the regular expression
+  return emailRegex.test(email);
+}
+
+type FormData = {
+  name: string;
+  email: string;
+  note: string;
+};
+const validate = (formData: FormData): string | null => {
+  if (!formData.name?.trim?.()) {
+    return "Sorry! I need your name to conatct you.";
+  } else if (!formData.note?.trim?.()) {
+    return "Your idea or Query is must to help you.";
+  } else if (!validateEmail(formData.email.trim())) {
+    return "Sorry! I need your email to contact you.";
+  }
+  return null;
+};
+
+const initialFormData: FormData = {
+  name: "",
+  email: "",
+  note: "",
+};
 
 export default function ContactUs() {
-  const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
+  const [isLoading, setIsLoading] = useState(false);
+  const [formData, setFormData] = useState(initialFormData);
+  const { toast } = useToast();
+
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-    console.log("Form submitted");
+    try {
+      setIsLoading(true);
+      const message = validate(formData);
+      if (message) {
+        toast({
+          title: "Hey, Got something wrong",
+          description: message,
+          variant: "destructive",
+        });
+        return;
+      }
+      const res = await fetch("/api/contact-me", {
+        method: "POST",
+        body: JSON.stringify(formData),
+      }).then((res) => res.json());
+      setFormData(initialFormData);
+      toast({
+        title: "Got it 🚀",
+        description: res.message,
+      });
+    } catch (error) {
+      toast({
+        title: "Scheduled: Catch up",
+        description: error?.message ?? "Something went wrong",
+        variant: "destructive",
+      });
+      console.log(error);
+    } finally {
+      setIsLoading(false);
+    }
   };
   return (
     <div className="mt-24 max-w-md w-full mx-auto rounded-none md:rounded-2xl p-4 md:p-8 shadow-input bg-white dark:bg-black">
@@ -25,28 +88,47 @@ export default function ContactUs() {
       <form className="my-8" onSubmit={handleSubmit}>
         <LabelInputContainer className="mb-4">
           <Label htmlFor="name">Your good name</Label>
-          <Input id="name" placeholder="e.g. Tyler" type="text" />
+          <Input
+            onChange={(e) =>
+              setFormData((prev) => ({ ...prev, name: e.target.value }))
+            }
+            value={formData.name}
+            id="name"
+            placeholder="e.g. Tyler"
+            type="text"
+          />
         </LabelInputContainer>
 
         <LabelInputContainer className="mb-4">
           <Label htmlFor="email">Your email for contact</Label>
           <Input
             id="email"
+            onChange={(e) =>
+              setFormData((prev) => ({ ...prev, email: e.target.value }))
+            }
             placeholder="e.g. tyler@souravlayek.com"
+            value={formData.email}
             type="email"
           />
         </LabelInputContainer>
         <LabelInputContainer className="mb-4">
           <Label htmlFor="note">Your note for me</Label>
-          <TextArea id="note" placeholder="I have an idea ..." />
+          <TextArea
+            onChange={(e) =>
+              setFormData((prev) => ({ ...prev, note: e.target.value }))
+            }
+            id="note"
+            value={formData.note}
+            placeholder="I have an idea ..."
+          />
         </LabelInputContainer>
 
         <button
           className="bg-gradient-to-br relative group/btn from-black dark:from-zinc-900 dark:to-zinc-900 to-neutral-600 block dark:bg-zinc-800 w-full text-white rounded-md h-10 font-medium shadow-[0px_1px_0px_0px_#ffffff40_inset,0px_-1px_0px_0px_#ffffff40_inset] dark:shadow-[0px_1px_0px_0px_var(--zinc-800)_inset,0px_-1px_0px_0px_var(--zinc-800)_inset] flex justify-center items-center"
           type="submit"
+          disabled={isLoading}
         >
-          {/* <div className="loader"></div> */}
-          Send &rarr;
+          {isLoading ? <div className="loader"></div> : <>Send &rarr;</>}
           <BottomGradient />
         </button>
 

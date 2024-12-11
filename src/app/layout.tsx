@@ -4,6 +4,9 @@ import { Inter } from "next/font/google";
 import { ThemeProvider } from "@/components/theme-provider";
 import Header from "@/components/Header";
 import { IconBulbFilled } from "@tabler/icons-react";
+
+import { Toaster } from "@/components/ui/toaster";
+
 const interFont = Inter({
   weight: ["300", "400", "500", "600", "700", "900"],
   subsets: ["latin"],
@@ -119,6 +122,8 @@ export default function RootLayout({
             <IconBulbFilled className="w-4 h-4 mr-2" /> Dark and light modes
             adapt to your device settings. &copy;Sourav Layek, 2024
           </footer>
+
+          <Toaster />
         </ThemeProvider>
       </body>
     </html>
