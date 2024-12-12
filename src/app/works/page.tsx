@@ -67,7 +67,7 @@ const WorkShowcaseCard = ({
         className="bg-white dark:bg-black min-h-[240px] h-full flex flex-col"
       >
         <div className="relative w-full h-full rounded-xl bg-center bg-cover bg-no-repeat flex items-end group/work-card">
-          <Image src={image} fill alt={name} />
+          <Image src={image} fill alt={name} objectFit="cover" />
         </div>
         <p className="text-sm tracking-widest font-light h-fit">{name}</p>
       </div>
@@ -85,7 +85,7 @@ const WorkShowcaseCard = ({
 const Works = () => {
   return (
     <div className="min-w-screen min-h-screen flex items-center justify-center mt-24">
-      <BentoGrid>
+      <BentoGrid className="w-full mx-6">
         {works
           .filter((item) => !item.hide)
           .map((item) => (
