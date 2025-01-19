@@ -63,6 +63,8 @@ const cards = [
   { title: "Train Man", src: "/gallery/trainMan.jpg" },
   { title: "Japan In India", src: "/gallery/japanInIndia.jpg" },
   { title: "Twistness", src: "/gallery/twistness.jpg" },
+  { title: "Humble Meal", src: "/gallery/eatingOnRoad.jpg" },
+  { title: "Paper Bond", src: "/gallery/readingOnRoad.jpg" },
 ];
 
 const SOCIALS = [
