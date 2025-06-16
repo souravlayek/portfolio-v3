@@ -6,6 +6,7 @@ import {
   IconUser,
   IconPackageExport,
   IconMessage,
+  IconArticle,
 } from "@tabler/icons-react";
 import { FloatingNav } from "@/components/ui/floating-navbar";
 import MagneticButton from "@/components/ui/magnetic-button";
@@ -22,6 +23,13 @@ const navItems = [
     name: "About Me",
     link: "/about-me",
     icon: <IconUser className="h-4 w-4 text-neutral-500 dark:text-white" />,
+  },
+  {
+    name: "Blog",
+    link: "https://blog.souravlayek.com",
+    icon: (
+      <IconArticle className="h-4 w-4 text-neutral-500 dark:text-white" />
+    ),
   },
   {
     name: "Works",
