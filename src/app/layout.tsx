@@ -4,6 +4,7 @@ import { Inter } from "next/font/google";
 import { ThemeProvider } from "@/components/theme-provider";
 import Header from "@/components/Header";
 import { IconBulbFilled } from "@tabler/icons-react";
+import "prismjs/themes/prism-tomorrow.css";
 
 import { Toaster } from "@/components/ui/toaster";
 
@@ -30,7 +31,6 @@ export const metadata: Metadata = {
   },
   keywords: [
     "Sourav Layek portfolio",
-    "hire Flutter developer",
     "hire React developer",
     "freelance web developer",
     "custom app development",
@@ -106,7 +106,7 @@ export default function RootLayout({
           href="/apple-touch-icon.png"
         />
         <link rel="manifest" href="/site.webmanifest" />
-        <script
+        {/* <script
           src="https://cdn.jsdelivr.net/npm/prismjs/prism.min.js"
           defer
         ></script>
@@ -117,7 +117,7 @@ export default function RootLayout({
         <link
           rel="stylesheet"
           href="https://cdn.jsdelivr.net/npm/prismjs/themes/prism-tomorrow.min.css"
-        ></link>
+        ></link> */}
       </head>
       <body
         className={`${interFont.className} antialiased min-h-screen max-w-screen overflow-x-hidden`}

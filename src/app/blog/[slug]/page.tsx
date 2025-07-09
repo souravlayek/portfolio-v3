@@ -1,6 +1,7 @@
 import { getPosts, getSinglePost } from "@/lib/ghost";
 import { notFound } from "next/navigation";
 import type { Metadata } from "next";
+import { highlight } from "@/lib/highlight";
 
 export const revalidate = 86400;
 
@@ -87,6 +88,8 @@ export default async function BlogDetailPage({
     notFound();
   }
 
+  const highlightedPost = highlight(post.html!);
+
   return (
     <main className="mt-24 min-h-screen text-white pb-12 px-4 md:px-0">
       <article className="max-w-4xl mx-auto pt-12">
@@ -140,7 +143,7 @@ export default async function BlogDetailPage({
         {/* Content */}
         <div
           className="prose prose-invert max-w-none"
-          dangerouslySetInnerHTML={{ __html: post.html || "" }}
+          dangerouslySetInnerHTML={{ __html: highlightedPost || "" }}
         />
       </article>
     </main>
