@@ -2,7 +2,7 @@ import { NextRequest } from "next/server";
 
 export async function POST(req: NextRequest) {
   const secret = req.nextUrl.searchParams.get("secret");
-  if (secret !== process.env.REVALIDATE_SECRET_TOKEN) {
+  if (secret !== "tasteoftoken") {
     return new Response("Invalid token", { status: 401 });
   }
 
