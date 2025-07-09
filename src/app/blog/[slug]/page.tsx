@@ -2,6 +2,7 @@ import { getPosts, getSinglePost } from "@/lib/ghost";
 import { notFound } from "next/navigation";
 import type { Metadata } from "next";
 import { highlight } from "@/lib/highlight";
+import ShareButton from "../Components/ShareButton";
 
 export const revalidate = 86400;
 
@@ -146,6 +147,12 @@ export default async function BlogDetailPage({
           dangerouslySetInnerHTML={{ __html: highlightedPost || "" }}
         />
       </article>
+      {/* Share Button */}
+      <ShareButton
+        url={`https://souravlayek.com/blog/${slug}`}
+        title={post.title || ""}
+        text={post.custom_excerpt || post.title || ""}
+      />
     </main>
   );
 }
