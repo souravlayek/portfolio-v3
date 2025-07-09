@@ -1,14 +1,23 @@
-import { getSinglePost } from "@/lib/ghost";
+import { getPosts, getSinglePost } from "@/lib/ghost";
 import { notFound } from "next/navigation";
 import type { Metadata } from "next";
+
+export const revalidate = 86400;
+
+export async function generateStaticParams() {
+  const posts = await getPosts();
+  return posts.map((post: any) => ({
+    slug: post.slug,
+  }));
+}
 
 // Dynamically generate SEO / Social metadata using Ghost's meta & social fields
 export async function generateMetadata({
   params,
 }: {
-  params: { slug: string };
+  params: Promise<{ slug: string }>;
 }): Promise<Metadata> {
-  const { slug } = params;
+  const { slug } = await params;
   const post = await getSinglePost(slug);
 
   if (!post) {
@@ -66,9 +75,9 @@ export async function generateMetadata({
 export default async function BlogDetailPage({
   params,
 }: {
-  params: { slug: string };
+  params: Promise<{ slug: string }>;
 }) {
-  const { slug } = params;
+  const { slug } = await params;
   if (!slug?.trim()) {
     notFound();
   }

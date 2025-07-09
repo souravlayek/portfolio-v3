@@ -5,6 +5,7 @@ import BlogCard from "./Components/BlogCard";
 import { ArrowRightIcon } from "@radix-ui/react-icons";
 import SubscribeForm from "./Components/SubscribeForm";
 import type { Metadata } from "next";
+export const revalidate = 3600; // Revalidate every 1 hour
 
 export const metadata: Metadata = {
   title: "Blog | Sourav Layek",

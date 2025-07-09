@@ -1,5 +1,6 @@
 import { getPosts } from "@/lib/ghost";
 import BlogCard from "../Components/BlogCard";
+export const revalidate = 3600; // Revalidate every 1 hour
 
 export default async function BlogPage() {
   const posts = await getPosts();
