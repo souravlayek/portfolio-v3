@@ -7,6 +7,7 @@ const nextConfig: NextConfig = {
       "api.microlink.io",
       "images.unsplash.com",
       "assets.aceternity.com",
+      "blog.souravlayek.com",
     ],
   },
 };

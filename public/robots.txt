@@ -1,0 +1,9 @@
+# *
+User-agent: *
+Allow: /
+
+# Host
+Host: https://souravlayek.com
+
+# Sitemaps
+Sitemap: https://souravlayek.com/sitemap.xml

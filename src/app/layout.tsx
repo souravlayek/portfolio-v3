@@ -106,6 +106,18 @@ export default function RootLayout({
           href="/apple-touch-icon.png"
         />
         <link rel="manifest" href="/site.webmanifest" />
+        <script
+          src="https://cdn.jsdelivr.net/npm/prismjs/prism.min.js"
+          defer
+        ></script>
+        <script
+          src="https://cdn.jsdelivr.net/npm/prismjs/plugins/autoloader/prism-autoloader.min.js"
+          defer
+        ></script>
+        <link
+          rel="stylesheet"
+          href="https://cdn.jsdelivr.net/npm/prismjs/themes/prism-tomorrow.min.css"
+        ></link>
       </head>
       <body
         className={`${interFont.className} antialiased min-h-screen max-w-screen overflow-x-hidden`}
