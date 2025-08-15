@@ -18,10 +18,5 @@ export async function getPosts(limit: string = "all") {
     });
 }
 export async function getSinglePost(slug: string) {
-  return await api.posts
-    .read({ slug }, { include: ["tags", "authors"] })
-    .catch((err) => {
-      console.error(err);
-      return null;
-    });
+  return await api.posts.read({ slug }, { include: ["tags", "authors"] });
 }

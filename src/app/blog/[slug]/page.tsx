@@ -84,7 +84,6 @@ export default async function BlogDetailPage({
     notFound();
   }
   const post = await getSinglePost(slug);
-
   if (!post) {
     notFound();
   }
