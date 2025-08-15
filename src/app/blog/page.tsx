@@ -5,12 +5,16 @@ import BlogCard from "./Components/BlogCard";
 import { ArrowRightIcon } from "@radix-ui/react-icons";
 import SubscribeForm from "./Components/SubscribeForm";
 import type { Metadata } from "next";
+
 export const revalidate = 3600; // Revalidate every 1 hour
 
 export const metadata: Metadata = {
   title: "Blog | Sourav Layek",
   description:
     "Explore articles on system design, software engineering, and building creative side projects. Written by Sourav Layek.",
+    alternates: {
+      canonical: 'https://souravlayek.com/blog'
+    },
   openGraph: {
     title: "Blog | Sourav Layek",
     description:
@@ -68,9 +72,9 @@ export default async function BlogPage() {
             <BlogCard key={post.id} post={post} />
           ))}
         </div>
-        <div className="mt-8 text-brightOrange border border-b-brightOrange w-fit flex items-center gap-2 hover:gap-3 transition-all">
-          <Link href="/blog/articles">See All</Link> <ArrowRightIcon />
-        </div>
+       <Link href="/blog/articles"><div className="mt-8 text-brightOrange border border-b-brightOrange w-fit flex items-center gap-2 hover:gap-3 transition-all">
+          See All <ArrowRightIcon />
+        </div></Link>
       </div>
     </main>
   );
