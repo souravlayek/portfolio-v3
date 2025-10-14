@@ -91,6 +91,10 @@ const CONNECTION = [
     label: "Call Me",
     link: "tel:+918617552545",
   },
+  {
+    label: "Whatsapp",
+    link: "https://wa.me/918617552545",
+  },
 ];
 
 const AboutMe = () => {
