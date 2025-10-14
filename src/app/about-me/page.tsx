@@ -72,10 +72,10 @@ const SOCIALS = [
     label: "LinkedIn",
     link: "https://www.linkedin.com/in/souravlayek/",
   },
-  {
-    label: "Read.cv",
-    link: "https://read.cv/souravlayek",
-  },
+  // {
+  //   label: "Read.cv",
+  //   link: "https://read.cv/souravlayek",
+  // },
   {
     label: "GitHub",
     link: "https://github.com/souravlayek",
