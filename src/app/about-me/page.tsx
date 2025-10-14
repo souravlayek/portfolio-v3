@@ -135,7 +135,10 @@ const AboutMe = () => {
             </p>
             <Link
               className="text-brightOrange font-semibold trasition duration-150 hover:tracking-widest"
-              href="https://drive.google.com/file/d/14Nxqbrt39n3sl6W88xrQRtlXe7wK3IBS/view?usp=drive_link"
+              href={
+                process.env.RESUME_URL ??
+                "https://drive.google.com/file/d/1h0sVb0d5o4-e-J4aihdAjz8Fy3rjBZb0/view?usp=sharing"
+              }
               target="_blank"
             >
               <span className="text-brightOrange">Download Resume</span>
