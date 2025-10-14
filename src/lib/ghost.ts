@@ -11,6 +11,7 @@ export async function getPosts(limit: string = "all") {
     .browse({
       include: ["tags", "authors"],
       limit: limit,
+      filter: "tags:-pitchmirror",
     })
     .catch((err) => {
       console.error(err);
