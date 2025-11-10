@@ -226,10 +226,17 @@ export const EXPERIENCES: {
 }[] = [
   {
     title: "Senior Software Engineer",
-    subTitle: "NextZen Minds (Oct 2024 - Present)",
+    subTitle: "AiPrise (Sep 2025 - Present)",
     content: [
-      "Currently serving as a Senior Software Engineer, contributing to architectural decisions to ensure application scalability and performance.",
-      "Improved team and project efficiency by introducing micro-frontend architecture, fostering a modular and maintainable codebase.",
+      "Currently serving as a Senior Software Engineer, contributing to ensure application scalability and performance.",
+    ],
+  },
+  {
+    title: "Associate Tech Lead",
+    subTitle: "NextZen Minds (Oct 2024 - Jun 2025)",
+    content: [
+      "Currently serving as a Associate Tech Lead, contributing to architectural decisions to ensure application scalability and performance.",
+      "Led a team of 9+ developers, providing guidance and mentorship to ensure project success.",
     ],
   },
   {

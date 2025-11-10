@@ -7,10 +7,12 @@ import {
   IconArrowRight,
   IconBrandAws,
   IconBrandDocker,
-  IconBrandFlutter,
   IconBrandGithub,
   IconBrandGolang,
   IconBrandNextjs,
+  IconBrandOpenai,
+  IconBrandReact,
+  IconBrandTailwind,
   IconBrandTypescript,
   IconWorld,
 } from "@tabler/icons-react";
@@ -61,16 +63,24 @@ const HomePage = () => {
         <BentoGrid>
           <BentoGridItem className="col-span-6 p-0 overflow-hidden">
             <WorkShowcaseCard
-              image="/projects/pahari.png"
-              name="Pahari Home Solution Companion"
-              technologies={[IconBrandFlutter]}
+              image="/projects/pitchmirror.png"
+              name="PitchMirror - AI-Powered English Speaking and Presentation Practice Platform"
+              link="https://pitchmirror.com"
+              technologies={[
+                IconBrandNextjs,
+                IconBrandReact,
+                IconBrandTypescript,
+                IconBrandTailwind,
+                IconBrandOpenai,
+              ]}
+              projectId="project_09"
             />
           </BentoGridItem>
           <BentoGridItem className="col-span-6 p-0 overflow-hidden">
             <WorkShowcaseCard
               image="/projects/maity_gini.png"
               name="Maity Gini Palace - Jwellery E-Commerce"
-              link="https://jwel.codevizon.com"
+              link="https://maityginipalace.com"
               technologies={[
                 IconBrandGolang,
                 IconBrandNextjs,
@@ -78,6 +88,7 @@ const HomePage = () => {
                 IconBrandDocker,
                 IconBrandAws,
               ]}
+              projectId="project_07"
             />
           </BentoGridItem>
         </BentoGrid>
@@ -153,6 +164,7 @@ const WorkShowcaseCard = ({
   name,
   github,
   link,
+  projectId,
   technologies = [],
 }: {
   image: string;
@@ -160,34 +172,42 @@ const WorkShowcaseCard = ({
   github?: string;
   link?: string;
   technologies: React.FC<{ className?: string }>[];
+  projectId: string;
 }) => {
   return (
-    <div className="bg-white dark:bg-black min-h-[240px] h-full flex flex-col">
-      <div
-        style={{
-          backgroundImage: `url('${image}')`,
-        }}
-        className="w-full h-full rounded-xl bg-center bg-cover bg-no-repeat flex items-end group/work-card"
-      >
-        <div className="h-8 px-2 w-full flex gap-2 items-center pb-2 opacity-0 transition duration-150 group-hover/work-card:opacity-100">
-          {github && (
-            <Link href={github} target="_blank">
-              <IconBrandGithub className="w-6 h-6 text-primary cursor-pointer hover:animate-bounce" />
-            </Link>
-          )}
-          {link && (
-            <Link href={link} target="_blank">
-              <IconWorld className="w-6 h-6 text-primary cursor-pointer hover:animate-bounce" />
-            </Link>
-          )}
-          {(github || link) && <Separator orientation="vertical" />}
-          {technologies.map((Icon, index) => (
-            <Icon key={index} className="w-5 h-5 text-primary/50" />
-          ))}
+    <Link
+      href={`/works?id=${projectId}&initialIsModalOpen=true`}
+      target="_blank"
+    >
+      <div className="bg-white dark:bg-black min-h-[240px] h-full flex flex-col">
+        <div
+          style={{
+            backgroundImage: `url('${image}')`,
+          }}
+          className="w-full h-full rounded-xl bg-center bg-cover bg-no-repeat flex items-end group/work-card"
+        >
+          <div className="h-8 px-2 w-full flex gap-2 items-center pb-2 opacity-0 transition duration-150 group-hover/work-card:opacity-100">
+            {github && (
+              <Link href={github} target="_blank">
+                <IconBrandGithub className="w-6 h-6 text-primary cursor-pointer hover:animate-bounce" />
+              </Link>
+            )}
+            {link && (
+              <Link href={link} target="_blank">
+                <IconWorld className="w-6 h-6 text-primary cursor-pointer hover:animate-bounce" />
+              </Link>
+            )}
+            {(github || link) && <Separator orientation="vertical" />}
+            <div className="flex gap-2 bg-gradient-to-r from-foreground/50 to-foreground/40 rounded-md p-2">
+              {technologies.map((Icon, index) => (
+                <Icon key={index} className="w-5 h-5 text-primary/50" />
+              ))}
+            </div>
+          </div>
         </div>
+        <p className="text-sm tracking-widest font-light h-fit">{name}</p>
       </div>
-      <p className="text-sm tracking-widest font-light h-fit">{name}</p>
-    </div>
+    </Link>
   );
 };
 

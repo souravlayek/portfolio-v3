@@ -196,5 +196,38 @@
       }
     ],
     "previewLink": "https://nzcares.com"
+  },
+  {
+    "id": "project_09",
+    "thumbnail": "/projects/pitchmirror.png",
+    "title": "PitchMirror",
+    "description": "PitchMirror is an AI-powered English speaking and presentation practice platform that helps non-native speakers improve fluency, tone, and delivery through real-time feedback. It was born from my own frustration after realizing that confidence in meetings wasn’t about vocabulary—it was about delivery, rhythm, and self-awareness.",
+    "challenges": [
+      {
+        "challenge": "Designing an AI feedback model that doesn’t sound repetitive or generic when evaluating spoken English quality.",
+        "solution": "Created structured prompt templates for OpenAI that adapt based on detected user tone and filler-word frequency, ensuring varied and contextually relevant feedback each time."
+      },
+      {
+        "challenge": "Handling browser compatibility and microphone permission issues across Chrome, Safari, and mobile devices.",
+        "solution": "Implemented a fallback recorder using MediaRecorder API and stored short WAV blobs for retry-based transcription, ensuring consistent experience across devices."
+      },
+      {
+        "challenge": "Communicating the product’s purpose to users who confuse it with generic English learning apps.",
+        "solution": "Built a short, narrative-driven onboarding that explains how hearing yourself and receiving AI feedback is different from grammar-based learning, inspired by my own experience of hearing my meeting recordings."
+      },
+      {
+        "challenge": "Managing early-stage costs while testing multiple AI models and voice features.",
+        "solution": "Implemented caching and delayed feedback delivery for free users, while prioritizing real-time feedback only for premium or test accounts to reduce API usage by over 50%."
+      }
+    ],
+    "techStack": [
+      { "name": "Next.js", "link": "https://nextjs.org/" },
+      { "name": "React", "link": "https://reactjs.org/" },
+      { "name": "TypeScript", "link": "https://www.typescriptlang.org/" },
+      { "name": "Tailwind CSS", "link": "https://tailwindcss.com/" },
+      { "name": "OpenAI API", "link": "https://openai.com/" },
+      { "name": "Vercel", "link": "https://vercel.com/" }
+    ],
+    "previewLink": "https://pitchmirror.com/"
   }
 ]

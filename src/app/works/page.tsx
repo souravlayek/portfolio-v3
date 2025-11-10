@@ -7,7 +7,8 @@ import Modal from "@/components/ui/modal";
 import Image from "next/image";
 import { IconArrowRight } from "@tabler/icons-react";
 import { LinkPreview } from "@/components/ui/link-preview";
-const ModalContent = ({ data }: { data: any }) => {
+import { useSearchParams } from "next/navigation";
+export const ModalContent = ({ data }: { data: any }) => {
   return (
     <div className="">
       <div className="relative w-full h-[400px] rounded-xl bg-center bg-cover bg-no-repeat flex items-end group/work-card">
@@ -49,12 +50,16 @@ const WorkShowcaseCard = ({
   image,
   name,
   details,
+  initialIsModalOpen,
 }: {
   image: string;
   name: string;
   details: any;
+  initialIsModalOpen: boolean;
 }) => {
-  const [isModalOpen, setIsModalOpen] = useState(false);
+  const [isModalOpen, setIsModalOpen] = useState(
+    () => initialIsModalOpen || false
+  );
   const handleCancel = () => {
     setIsModalOpen(false);
   };
@@ -83,6 +88,9 @@ const WorkShowcaseCard = ({
   );
 };
 const Works = () => {
+  const searchParams = useSearchParams();
+  const projectId = searchParams.get("id");
+  const isModalOpen = projectId ? true : false;
   return (
     <div className="min-w-screen min-h-screen flex items-center justify-center mt-24">
       <BentoGrid className="w-full mx-6">
@@ -97,6 +105,7 @@ const Works = () => {
                 image={item.thumbnail}
                 name={item.title}
                 details={item}
+                initialIsModalOpen={isModalOpen && projectId === item.id}
               />
             </BentoGridItem>
           ))}
