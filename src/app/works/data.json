@@ -162,9 +162,8 @@
   },
   {
     "id": "project_08",
-    "hide": true,
     "thumbnail": "/projects/nzhms.jpeg",
-    "title": "NZHMS (Healthcare and Laboratory Information Management System)",
+    "title": "NZCares (Healthcare and Laboratory Information Management System)",
     "description": "A comprehensive HIMS and LIMS platform supporting both Outpatient Department (OPD) and Inpatient Department (IPD) workflows. This project aimed to streamline hospital and laboratory operations, improving efficiency and patient care.",
     "challenges": [
       {
@@ -196,7 +195,6 @@
         "link": "https://webpack.js.org/concepts/module-federation/"
       }
     ],
-    "previewLink": "https://nzhms.example.com",
-    "repositoryLink": "https://github.com/yourusername/nzhms"
+    "previewLink": "https://nzcares.com"
   }
 ]
