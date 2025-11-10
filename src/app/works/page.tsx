@@ -1,6 +1,6 @@
 "use client";
 import works from "./data.json";
-
+export const dynamic = "force-dynamic";
 import React, { useState } from "react";
 import { BentoGrid, BentoGridItem } from "@/components/ui/bento-grid";
 import Modal from "@/components/ui/modal";
