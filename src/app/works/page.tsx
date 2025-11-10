@@ -8,7 +8,7 @@ import Image from "next/image";
 import { IconArrowRight } from "@tabler/icons-react";
 import { LinkPreview } from "@/components/ui/link-preview";
 import { useSearchParams } from "next/navigation";
-export const ModalContent = ({ data }: { data: any }) => {
+const ModalContent = ({ data }: { data: any }) => {
   return (
     <div className="">
       <div className="relative w-full h-[400px] rounded-xl bg-center bg-cover bg-no-repeat flex items-end group/work-card">
